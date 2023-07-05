@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://github.com/GITHUB_USERNAME/REPO_SLUG">
+  <a href="https://github.com/potatoman2023/DynamoScripts">
     <!-- Please provide path to your logo here -->
     <img src="docs/images/potato-svgrepo-com.svg" alt="Logo" width="100" height="100">
   </a>
