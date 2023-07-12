@@ -59,7 +59,7 @@
 
 ### Built With
 
-> **POTATOMAN:** ABSOLUTE CONFIDENCE IN NOT KNOWING A PROGRAMING LANGUAGE AND THE HELP OF LOADS OF RESEARCHING AND STICHING STUFF AROUND.
+> **POTATOMAN:** ABSOLUTE CONFIDENCE IN NOT KNOWING ANYTHING AND EVERYTHING WITH THE HELP OF LOADS OF RESEARCHING AND STICHING STUFF AROUND.
 
 ## Getting Started
 
@@ -71,6 +71,10 @@
 
 > Please do have Dynamo 2.0 or above installed, some of the graph have dependency on extra packages, we do tend to avoid that but sometimes it can't be helped. Dynamo should prompt you to install the package anyway. 
 
+>Some notatble packages:
+> - Spring nodes
+> - Clockwork
+> - 
 
 ## Usage
 
