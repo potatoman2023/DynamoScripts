@@ -23,7 +23,7 @@
 
 [![Project license](https://img.shields.io/badge/license-MIT-a5668b?color=a5668b
 )](LICENSE)
-[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/GITHUB_USERNAME/REPO_SLUG/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+[![Pull Requests welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=flat-square)](https://github.com/potatoman2023/DynamoScripts/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
 [![code with love by GITHUB_USERNAME](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-POTATOMAN-ff1414.svg?style=flat-square)](https://github.com/potatoman2023)
 
 </div>
@@ -84,7 +84,7 @@
 
 ## Roadmap
 
->NO ROADMAP AS FOR NOW. I DEVELOPED AS I PLEASED, BITE ME!
+>**POTATOMAN:** NO ROADMAP AS FOR NOW. I DEVELOPED AS I PLEASED, BITE ME!
 
 ## Support
 
