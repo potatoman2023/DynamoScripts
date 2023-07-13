@@ -78,9 +78,7 @@
 
 ## Usage
 
->These graphs are made free for use and open sourced. Keep it that way, DO NOT MONETISE IN ANY WAY OR FORM. 
-
->We're fortunate enough to have the community to help out when we needed them to so this is something we as BIM users can give back.
+>**POTATOMAN:** If you don't know how a graph will behave, best test it in an isolated environment. (don't do your tests on your working file duh~)
 
 ## Roadmap
 
