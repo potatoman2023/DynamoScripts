@@ -65,7 +65,15 @@
 
 ### Prerequisites
 
-> Common sense and positivity 
+> Common sense and positivity
+
+> You do not need to know coding to use Dynamo Graphs - that being said it would be helpful.
+
+> The graphs are put into their respective folders with a readme for each one of them for a summary and short instruction of use.
+
+> The graphs themselves have .dyn extensions so you only need to download that file (If in panick mode:copy pasta the raw code into a text editor and save it as a .dyn)
+
+> Load the graph read instructions and enjoy.
 
 ### Installation
 
@@ -80,6 +88,8 @@
 
 >**POTATOMAN:** If you don't know how a graph will behave, best test it in an isolated environment. (don't do your tests on your working file duh~)
 
+>
+
 ## Roadmap
 
 >**POTATOMAN:** NO ROADMAP AS FOR NOW. I DEVELOPED AS I PLEASED, BITE ME!
@@ -91,6 +101,8 @@
 ## Contributing
 
 First off, thanks for taking the time to contribute! Contributions are what make the our community such an amazing place to learn, inspire, and create. Any contributions you make will benefit everybody else and are **greatly appreciated**.
+
+Please adhere to this project's [Code of conduct](CONTRIBUTING.md)
 
 ## Authors & contributors
 
