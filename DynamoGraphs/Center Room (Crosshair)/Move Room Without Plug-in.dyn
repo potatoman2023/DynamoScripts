@@ -1,131 +1,1163 @@
-<Workspace Version="1.3.3.4111" X="-663.202687050871" Y="1041.49890392107" zoom="0.685157988156056" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
-  <NamespaceResolutionMap>
-    <ClassMap partialName="Autodesk.Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
-    <ClassMap partialName="Autodesk.DesignScript.Geometry.Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
-  </NamespaceResolutionMap>
-  <Elements>
-    <DSRevitNodesUI.Categories guid="f4486a59-2772-4746-8a06-1cf74eba0b7e" type="DSRevitNodesUI.Categories" nickname="Categories" x="767.745924932925" y="-566.856860282806" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="425:Rooms" />
-    <DSRevitNodesUI.ElementsOfCategory guid="c9db86df-911c-4ec6-8b9a-3d04f8022379" type="DSRevitNodesUI.ElementsOfCategory" nickname="All Elements of Category" x="1025.99049430826" y="-725.807486176204" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-    </DSRevitNodesUI.ElementsOfCategory>
-    <CoreNodeModels.Watch guid="a4032ef5-e977-4640-8d1c-b19a4b917b2f" type="CoreNodeModels.Watch" nickname="Watch" x="1762.28165933791" y="-281.757496259667" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-    </CoreNodeModels.Watch>
-    <CoreNodeModels.Watch guid="6867334b-7f3d-4776-b39c-2ecbcdd46dfe" type="CoreNodeModels.Watch" nickname="Watch" x="2778.43631174816" y="-714.892733765128" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-    </CoreNodeModels.Watch>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="98ecec0f-dde9-4f01-a361-8585ba0f082c" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Room.CenterBoundary" x="1249.35097224692" y="-567.233789037341" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Room.CenterBoundary">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9902f956-a609-4d03-8111-059c622951b4" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Room.Location" x="1602.45444740085" y="-785.541230271985" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Room.Location">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="74a5a6f2-30ae-4f8c-a6f2-f00092b37c17" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="PolyCurve.ByJoinedCurves" x="1451.71638311381" y="-639.685602804499" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.PolyCurve.ByJoinedCurves@Autodesk.DesignScript.Geometry.Curve[]">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="d9184b22-6b44-4dd6-be37-3a11248140bb" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Curve.ExtrudeAsSolid" x="1524.16819688097" y="-391.100931430975" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Curve.ExtrudeAsSolid@double">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="True" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="d1d74e00-df06-4f2f-a799-104b79048f85" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Solid.Centroid" x="1730.2811153565" y="-497.280313675947" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Solid.Centroid">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="86c7ac88-86e1-454e-a58e-616225318074" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Point.X" x="1943.88904904933" y="-674.662340485196" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Point.X">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="0be9264f-f4de-48c7-a0f4-c51c405d535e" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Point.Y" x="1992.42178339003" y="-541.001235776819" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Point.Y">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="7abb9cba-f9d5-452f-9f8e-f1e310e2f1d8" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Point.Z" x="1953.88240267239" y="-396.097608242503" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Point.Z">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="c547d0b5-0bc7-47ab-8fc6-e378856778e3" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Vector.ByTwoPoints" x="2212.12321814464" y="-621.347272464429" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Vector.ByTwoPoints@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="7801f1ec-b31a-4f3c-950a-18b02fb45b2b" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Element.MoveByVector" x="2414.80473133982" y="-727.038205948684" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Element.MoveByVector@Autodesk.DesignScript.Geometry.Vector">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <DSRevitNodesUI.Categories guid="a6e8b99a-eb32-4899-9f2e-4dd1115dc75a" type="DSRevitNodesUI.Categories" nickname="Categories" x="776.810021476078" y="-991.421920141332" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="424:RoomTags" />
-    <DSRevitNodesUI.ElementsOfCategory guid="d9eb3aeb-1001-4aec-b56e-6299ed4d917f" type="DSRevitNodesUI.ElementsOfCategory" nickname="All Elements of Category" x="1065.35897076479" y="-1062.32879780165" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-    </DSRevitNodesUI.ElementsOfCategory>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="99903871-f41b-4932-b744-c6aeb5170bb4" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Vector.ByTwoPoints" x="2160.5240874529" y="-785.914704110045" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Vector.ByTwoPoints@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <CoreNodeModels.Watch guid="71242c0d-d942-4e38-b0ee-9b459b7f8995" type="CoreNodeModels.Watch" nickname="Watch" x="1387.73171027734" y="-1213.36574999088" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-    </CoreNodeModels.Watch>
-    <CoreNodeModels.Watch guid="b0bebbdc-e0e2-43d2-a79d-fd1f284960c9" type="CoreNodeModels.Watch" nickname="Watch" x="2157.6012822545" y="-1227.1931098701" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-    </CoreNodeModels.Watch>
-    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="87fae961-b6c7-43a2-aa04-ac731fa1316b" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1215" y="-1768" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="" ShouldFocus="false" />
-    <PythonNodeModels.PythonNode guid="4af1bf8b-d828-4a03-9903-984907b9fe54" type="PythonNodeModels.PythonNode" nickname="Room Tag MOVE" x="1699.08956440265" y="-1255.41381432885" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="1">
-      <PortInfo index="0" default="False" />
-      <Script>import clr
-clr.AddReference('ProtoGeometry')
-from Autodesk.DesignScript.Geometry import *
-
-import clr
-clr.AddReference('RevitAPI') 
-clr.AddReference('RevitAPIUI') 
-from Autodesk.Revit.DB import *
-
-clr.AddReference("RevitServices")
-import RevitServices
-from RevitServices.Persistence import DocumentManager
-from RevitServices.Transactions import TransactionManager
-
-clr.AddReference("RevitNodes")
-import Revit
-clr.ImportExtensions(Revit.GeometryConversion)
-
-doc = DocumentManager.Instance.CurrentDBDocument
- 
-#The inputs to this node will be stored as a list in the IN variables.
-rtags = UnwrapElement(IN[0])
-
-TransactionManager.Instance.EnsureInTransaction(doc)
-	
-for rt in rtags:
-	if rt.Room != None:
-		rt.Location.Move(rt.Room.Location.Point - rt.Location.Point)
-
-# End Transaction
-TransactionManager.Instance.TransactionTaskDone()
-
-#Assign your output to the OUT variable.
-OUT = rtags</Script>
-    </PythonNodeModels.PythonNode>
-  </Elements>
-  <Connectors>
-    <Dynamo.Graph.Connectors.ConnectorModel start="f4486a59-2772-4746-8a06-1cf74eba0b7e" start_index="0" end="c9db86df-911c-4ec6-8b9a-3d04f8022379" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="c9db86df-911c-4ec6-8b9a-3d04f8022379" start_index="0" end="98ecec0f-dde9-4f01-a361-8585ba0f082c" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="c9db86df-911c-4ec6-8b9a-3d04f8022379" start_index="0" end="9902f956-a609-4d03-8111-059c622951b4" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="c9db86df-911c-4ec6-8b9a-3d04f8022379" start_index="0" end="7801f1ec-b31a-4f3c-950a-18b02fb45b2b" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="98ecec0f-dde9-4f01-a361-8585ba0f082c" start_index="0" end="74a5a6f2-30ae-4f8c-a6f2-f00092b37c17" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="9902f956-a609-4d03-8111-059c622951b4" start_index="0" end="c547d0b5-0bc7-47ab-8fc6-e378856778e3" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="9902f956-a609-4d03-8111-059c622951b4" start_index="0" end="99903871-f41b-4932-b744-c6aeb5170bb4" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="74a5a6f2-30ae-4f8c-a6f2-f00092b37c17" start_index="0" end="d9184b22-6b44-4dd6-be37-3a11248140bb" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d9184b22-6b44-4dd6-be37-3a11248140bb" start_index="0" end="d1d74e00-df06-4f2f-a799-104b79048f85" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d9184b22-6b44-4dd6-be37-3a11248140bb" start_index="0" end="a4032ef5-e977-4640-8d1c-b19a4b917b2f" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d1d74e00-df06-4f2f-a799-104b79048f85" start_index="0" end="86c7ac88-86e1-454e-a58e-616225318074" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d1d74e00-df06-4f2f-a799-104b79048f85" start_index="0" end="0be9264f-f4de-48c7-a0f4-c51c405d535e" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d1d74e00-df06-4f2f-a799-104b79048f85" start_index="0" end="7abb9cba-f9d5-452f-9f8e-f1e310e2f1d8" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d1d74e00-df06-4f2f-a799-104b79048f85" start_index="0" end="c547d0b5-0bc7-47ab-8fc6-e378856778e3" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d1d74e00-df06-4f2f-a799-104b79048f85" start_index="0" end="99903871-f41b-4932-b744-c6aeb5170bb4" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="c547d0b5-0bc7-47ab-8fc6-e378856778e3" start_index="0" end="7801f1ec-b31a-4f3c-950a-18b02fb45b2b" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="7801f1ec-b31a-4f3c-950a-18b02fb45b2b" start_index="0" end="6867334b-7f3d-4776-b39c-2ecbcdd46dfe" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="a6e8b99a-eb32-4899-9f2e-4dd1115dc75a" start_index="0" end="d9eb3aeb-1001-4aec-b56e-6299ed4d917f" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d9eb3aeb-1001-4aec-b56e-6299ed4d917f" start_index="0" end="71242c0d-d942-4e38-b0ee-9b459b7f8995" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d9eb3aeb-1001-4aec-b56e-6299ed4d917f" start_index="0" end="4af1bf8b-d828-4a03-9903-984907b9fe54" end_index="0" portType="0" />
-  </Connectors>
-  <Notes />
-  <Annotations />
-  <Presets />
-  <Cameras>
-    <Camera Name="Background Preview" eyeX="-5300.27916939101" eyeY="6085.9288101278" eyeZ="10414.4171999411" lookX="6318.71025014854" lookY="-4414.52193145996" lookZ="-8927.74663504077" upX="0.0963433351683431" upY="0.985996037070489" upZ="-0.136124122219018" />
-  </Cameras>
-</Workspace>
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Move Room Without Plug-in",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Autodesk.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Autodesk.DesignScript.Geometry.Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [
+    {
+      "Id": "f4486a59277247468a061cf74eba0b7e",
+      "Name": "Categories",
+      "Type": "dropdownSelection",
+      "Value": "OST_Rooms",
+      "Description": "All built-in categories.",
+      "SelectedIndex": 517
+    },
+    {
+      "Id": "a6e8b99aeb3248999f2e4dd1115dc75a",
+      "Name": "Categories",
+      "Type": "dropdownSelection",
+      "Value": "OST_RoomTags",
+      "Description": "All built-in categories.",
+      "SelectedIndex": 516
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 517,
+      "SelectedString": "OST_Rooms",
+      "NodeType": "ExtensionNode",
+      "Id": "f4486a59277247468a061cf74eba0b7e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ec47efe58b8f409594ea4a71ca71a900",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "c9db86df911c4ec68b9a3d04f8022379",
+      "Inputs": [
+        {
+          "Id": "c484e09062b144f4b735b6b971348380",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4c86bf4c61f24c6db63b8ca692baea20",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "6867334b7f3d4776b39c2ecbcdd46dfe",
+      "Inputs": [
+        {
+          "Id": "81dc0426aed2474f95a683be7490e88f",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "680ebfe4243e438abd1750e9945d944d",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Room.CenterBoundary",
+      "Id": "98ecec0fdde94f01a3618585ba0f082c",
+      "Inputs": [
+        {
+          "Id": "653457fc97484b5883966a43b23467de",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "627c3e4f7fd6427dba3a0bca1fc84a7d",
+          "Name": "Curve[][]",
+          "Description": "Curve[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Centerline boundary\n\nRoom.CenterBoundary: Curve[][]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Room.Location",
+      "Id": "9902f956a6094d038111059c622951b4",
+      "Inputs": [
+        {
+          "Id": "7855464292f5467e9478a37d02340d8c",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "292e8c1bef6e4a69a710b0db676c3b47",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get Room Location\n\nRoom.Location: Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolyCurve.ByJoinedCurves@Autodesk.DesignScript.Geometry.Curve[],double",
+      "Id": "74a5a6f230ae4f8ca6f2f00092b37c17",
+      "Inputs": [
+        {
+          "Id": "c1be29a1ad5347e889d4ba58d57c3a27",
+          "Name": "curves",
+          "Description": "Curves to join into polycurve\n\nCurve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8bf3a6a251b64ed3adac05f04509529e",
+          "Name": "joinTolerance",
+          "Description": "Tolerance to determine size of gap allowed between curves to be joined\n\ndouble\nDefault value : 0.001",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "13085a7f2d02433a9a54e710af67c5ec",
+          "Name": "PolyCurve",
+          "Description": "Polycurve created by joined curves",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Make PolyCurve by joining curves. Flips curve as needed for connectivity. Choose a preferred join tolerance between 1e-6 and 1e-3 units.\n\nPolyCurve.ByJoinedCurves (curves: Curve[], joinTolerance: double = 0.001): PolyCurve"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.ExtrudeAsSolid@double",
+      "Id": "d9184b226b444dd6be373a11248140bb",
+      "Inputs": [
+        {
+          "Id": "0664ac4fc52849f1a722b3c6e50c00e6",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4c8058ac2d4a4b25b39dfe3e5f7b5f51",
+          "Name": "distance",
+          "Description": "Distance to extrude\n\ndouble\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c005b44d4a1f4093ac86694638c3ac3a",
+          "Name": "Solid",
+          "Description": "The extruded Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Extrudes a Curve in the Normal direction by the specified distance. Curve must be closed.\n\nCurve.ExtrudeAsSolid (distance: double = 1): Solid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Solid.Centroid",
+      "Id": "d1d74e00df064f2fa799104b79048f85",
+      "Inputs": [
+        {
+          "Id": "bbb59038a4b443f1b1161f47b83a24f6",
+          "Name": "solid",
+          "Description": "Autodesk.DesignScript.Geometry.Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d61643b9ba4942e1b106d8c89397252f",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The centroid of the Solid\n\nSolid.Centroid ( ): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.ByTwoPoints@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point",
+      "Id": "c547d0b50bc747ab8fc6e378856778e3",
+      "Inputs": [
+        {
+          "Id": "29dff5476d5848fc8e993bd99b3f02ae",
+          "Name": "start",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f292b074d26d4a68b561a396e1bec1de",
+          "Name": "end",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "50aae58a7a2b4fdbba0c12c20c6b8f02",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Form a Vector by two end points. The result is a vector from the start to the end point.\n\nVector.ByTwoPoints (start: Point, end: Point): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.MoveByVector@Autodesk.DesignScript.Geometry.Vector",
+      "Id": "7801f1ecb31a4f3c950a18b02fb45b2b",
+      "Inputs": [
+        {
+          "Id": "5a2fdd39066540269b9c0f4973e17e2c",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0d9adb4710fc44fe8c6c385cfcc75194",
+          "Name": "vector",
+          "Description": "Translation Vector\n\nVector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "efffd15cd6fb4ad3bf19e03641b8dd20",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Move Revit Element by Vector\n\nElement.MoveByVector (vector: Vector): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Transaction.Transaction.Start@var",
+      "Id": "011e44aab918478db05a8f9336875258",
+      "Inputs": [
+        {
+          "Id": "8ac5061096d84c1ca4ed737a19e154f7",
+          "Name": "input",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "410e944e2df24ffd8743a278ef159faf",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Start a transaction if neccesssary, returning whatever was passed in.\n\nTransaction.Start (input: var): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Transaction.Transaction.Start@var",
+      "Id": "8b3f6219564f400e9af01ad33b6ccece",
+      "Inputs": [
+        {
+          "Id": "b518024c25f54187b7e841dd40ae7fec",
+          "Name": "input",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "03e65e2190ca469991d7a679dec9ecf8",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Start a transaction if neccesssary, returning whatever was passed in.\n\nTransaction.Start (input: var): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Transaction.Transaction.Start@var",
+      "Id": "95827e01eb804f4b97dcad0680625793",
+      "Inputs": [
+        {
+          "Id": "9b761d827d4446eca69a4b29014c4547",
+          "Name": "input",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "29155cf1ca5648169a8d7ade178b02f5",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Start a transaction if neccesssary, returning whatever was passed in.\n\nTransaction.Start (input: var): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.MoveByVector@Autodesk.DesignScript.Geometry.Vector",
+      "Id": "0ef9b39c6a8242948f7934722b6cc1ba",
+      "Inputs": [
+        {
+          "Id": "81df85bbb6a24cb5b743d659e6fc271f",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0798369827db487ebaeed91ed8833819",
+          "Name": "vector",
+          "Description": "Translation Vector\n\nVector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d2d8b3ea01cd4d849237445b451b9836",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Move Revit Element by Vector\n\nElement.MoveByVector (vector: Vector): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.ByTwoPoints@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point",
+      "Id": "9d4b1b5fe90543dda2aee956e13f9e59",
+      "Inputs": [
+        {
+          "Id": "d6687d20f0c44286ae0860e4067e190e",
+          "Name": "start",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5255d05e43294d6e9ee234eb2e2ea4c9",
+          "Name": "end",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "674fd5a16b4e484eba930f5d295b4e52",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Form a Vector by two end points. The result is a vector from the start to the end point.\n\nVector.ByTwoPoints (start: Point, end: Point): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.GetLocation",
+      "Id": "8334d40278ca48608c78430d2d8ff129",
+      "Inputs": [
+        {
+          "Id": "caadf762974f48f3a54cc40df27abee2",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1c1453d455c74ee8b8bd6e6b624219f4",
+          "Name": "Geometry",
+          "Description": "Location Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get an existing element's location\n\nElement.GetLocation ( ): Geometry"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "71242c0dd9424e38b0ee9b459b7f8995",
+      "Inputs": [
+        {
+          "Id": "fa5fd81f76b7438f81521c666faeda9e",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "959a5c7c34874503873b76411ccefaa0",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "d9eb3aeb10014aecb56e6299ed4d917f",
+      "Inputs": [
+        {
+          "Id": "4c3dcb88a62b4ba0a3c7ec6b853777e1",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5d37dde32e12420493c2f9b7897c442f",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 516,
+      "SelectedString": "OST_RoomTags",
+      "NodeType": "ExtensionNode",
+      "Id": "a6e8b99aeb3248999f2e4dd1115dc75a",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "fd4a6d2c6c9844ce965ac4401672a0e0",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "ec47efe58b8f409594ea4a71ca71a900",
+      "End": "c484e09062b144f4b735b6b971348380",
+      "Id": "a542acef1cd04b009ccc465ed5684a3f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4c86bf4c61f24c6db63b8ca692baea20",
+      "End": "653457fc97484b5883966a43b23467de",
+      "Id": "998c1bf60f0c456baa805302231aefd0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4c86bf4c61f24c6db63b8ca692baea20",
+      "End": "7855464292f5467e9478a37d02340d8c",
+      "Id": "0b5056622809425491f29c773fc78f9b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4c86bf4c61f24c6db63b8ca692baea20",
+      "End": "8ac5061096d84c1ca4ed737a19e154f7",
+      "Id": "2835faa3b7694a4286bf6ba40dcd857d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "627c3e4f7fd6427dba3a0bca1fc84a7d",
+      "End": "c1be29a1ad5347e889d4ba58d57c3a27",
+      "Id": "4aee96783b3142c8ba5fca386c895867",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "292e8c1bef6e4a69a710b0db676c3b47",
+      "End": "29dff5476d5848fc8e993bd99b3f02ae",
+      "Id": "753dc424b48d4dd4845d4bc52523380c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "13085a7f2d02433a9a54e710af67c5ec",
+      "End": "0664ac4fc52849f1a722b3c6e50c00e6",
+      "Id": "1efb163b39524d9b84f96166d9bc3361",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c005b44d4a1f4093ac86694638c3ac3a",
+      "End": "bbb59038a4b443f1b1161f47b83a24f6",
+      "Id": "76ef646bb5dd442ebe5908fb90bca025",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d61643b9ba4942e1b106d8c89397252f",
+      "End": "f292b074d26d4a68b561a396e1bec1de",
+      "Id": "abd3a2af9e734ac2bd152934e40bb048",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d61643b9ba4942e1b106d8c89397252f",
+      "End": "5255d05e43294d6e9ee234eb2e2ea4c9",
+      "Id": "1d4ad964d44e4801873296886b72caee",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "50aae58a7a2b4fdbba0c12c20c6b8f02",
+      "End": "0d9adb4710fc44fe8c6c385cfcc75194",
+      "Id": "543ddfae5f6e45efbaec58a8034f7356",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "efffd15cd6fb4ad3bf19e03641b8dd20",
+      "End": "81dc0426aed2474f95a683be7490e88f",
+      "Id": "f1973a71ee254ec5b9a15a2aefe09b1c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "410e944e2df24ffd8743a278ef159faf",
+      "End": "5a2fdd39066540269b9c0f4973e17e2c",
+      "Id": "899d8a805dd14a3f8503ce939f6d7b8d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "03e65e2190ca469991d7a679dec9ecf8",
+      "End": "0798369827db487ebaeed91ed8833819",
+      "Id": "e280a11b5e32441898429576a3099736",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "29155cf1ca5648169a8d7ade178b02f5",
+      "End": "81df85bbb6a24cb5b743d659e6fc271f",
+      "Id": "ff32a7ca66014018a3002e462f86c914",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "674fd5a16b4e484eba930f5d295b4e52",
+      "End": "b518024c25f54187b7e841dd40ae7fec",
+      "Id": "93f2ed4267ea445dae7f89896ce3a6b9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1c1453d455c74ee8b8bd6e6b624219f4",
+      "End": "d6687d20f0c44286ae0860e4067e190e",
+      "Id": "bf7e88c2b08e4f7686e100b02b8354e6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5d37dde32e12420493c2f9b7897c442f",
+      "End": "9b761d827d4446eca69a4b29014c4547",
+      "Id": "fea8384a27a74142960182e6617dd3a7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5d37dde32e12420493c2f9b7897c442f",
+      "End": "caadf762974f48f3a54cc40df27abee2",
+      "Id": "21685cbd78864343a086549792460c5b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5d37dde32e12420493c2f9b7897c442f",
+      "End": "fa5fd81f76b7438f81521c666faeda9e",
+      "Id": "78a7bcd958af44258882a1fbd672ee7c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fd4a6d2c6c9844ce965ac4401672a0e0",
+      "End": "4c3dcb88a62b4ba0a3c7ec6b853777e1",
+      "Id": "7a9cf0c293b9452bbda7eb6fbf457043",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.13",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "2.0",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.13.1.3887",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -5300.279296875,
+      "EyeY": 6085.9287109375,
+      "EyeZ": 10414.4169921875,
+      "LookX": 6318.71044921875,
+      "LookY": -4414.52197265625,
+      "LookZ": -8927.7470703125,
+      "UpX": 0.096343338489532471,
+      "UpY": 0.98599600791931152,
+      "UpZ": -0.13612411916255951
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "f4486a59277247468a061cf74eba0b7e",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 624.18483585132,
+        "Y": -1288.98856842928
+      },
+      {
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Id": "c9db86df911c4ec68b9a3d04f8022379",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 842.38890415255,
+        "Y": -1477.41345205778
+      },
+      {
+        "Name": "Watch",
+        "ShowGeometry": true,
+        "Id": "6867334b7f3d4776b39c2ecbcdd46dfe",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2634.87522266655,
+        "Y": -1437.0244419116
+      },
+      {
+        "Name": "Room.CenterBoundary",
+        "ShowGeometry": true,
+        "Id": "98ecec0fdde94f01a3618585ba0f082c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1123.06673820923,
+        "Y": -1027.96898243069
+      },
+      {
+        "Name": "Room.Location",
+        "ShowGeometry": true,
+        "Id": "9902f956a6094d038111059c622951b4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1619.88756677475,
+        "Y": -1581.62207549987
+      },
+      {
+        "Name": "PolyCurve.ByJoinedCurves",
+        "ShowGeometry": true,
+        "Id": "74a5a6f230ae4f8ca6f2f00092b37c17",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1351.11163691016,
+        "Y": -885.444759195765
+      },
+      {
+        "Name": "Curve.ExtrudeAsSolid",
+        "ShowGeometry": true,
+        "Id": "d9184b226b444dd6be373a11248140bb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1524.91370144456,
+        "Y": -738.352390928459
+      },
+      {
+        "Name": "Solid.Centroid",
+        "ShowGeometry": true,
+        "Id": "d1d74e00df064f2fa799104b79048f85",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1690.41111105893,
+        "Y": -953.116092781822
+      },
+      {
+        "Name": "Vector.ByTwoPoints",
+        "ShowGeometry": true,
+        "Id": "c547d0b50bc747ab8fc6e378856778e3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2044.79047579347,
+        "Y": -1083.24193429142
+      },
+      {
+        "Name": "Element.MoveByVector",
+        "ShowGeometry": true,
+        "Id": "7801f1ecb31a4f3c950a18b02fb45b2b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2328.73394090239,
+        "Y": -1489.06114172581
+      },
+      {
+        "Name": "Transaction.Start",
+        "ShowGeometry": true,
+        "Id": "011e44aab918478db05a8f9336875258",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2010.63263284316,
+        "Y": -1571.82394152866
+      },
+      {
+        "Name": "Transaction.Start",
+        "ShowGeometry": true,
+        "Id": "8b3f6219564f400e9af01ad33b6ccece",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2255.00863948888,
+        "Y": 368.444886166528
+      },
+      {
+        "Name": "Transaction.Start",
+        "ShowGeometry": true,
+        "Id": "95827e01eb804f4b97dcad0680625793",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2249.83159671755,
+        "Y": 209.437085810852
+      },
+      {
+        "Name": "Element.MoveByVector",
+        "ShowGeometry": true,
+        "Id": "0ef9b39c6a8242948f7934722b6cc1ba",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2548.45986593304,
+        "Y": 339.53256942948
+      },
+      {
+        "Name": "Vector.ByTwoPoints",
+        "ShowGeometry": true,
+        "Id": "9d4b1b5fe90543dda2aee956e13f9e59",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": true,
+        "X": 2027.03798053709,
+        "Y": 545.764145561495
+      },
+      {
+        "Name": "Element.GetLocation",
+        "ShowGeometry": true,
+        "Id": "8334d40278ca48608c78430d2d8ff129",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1590.91010407443,
+        "Y": 697.471071093998
+      },
+      {
+        "Name": "Watch",
+        "ShowGeometry": true,
+        "Id": "71242c0dd9424e38b0ee9b459b7f8995",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1454.51825289494,
+        "Y": 277.662905309909
+      },
+      {
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Id": "d9eb3aeb10014aecb56e6299ed4d917f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1120.5536841358896,
+        "Y": 588.30671012941525
+      },
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "a6e8b99aeb3248999f2e4dd1115dc75a",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 853.12362006340663,
+        "Y": 565.35187571761423
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "a444e8aa3ecb4b2893f6ccf430e9968b",
+        "Title": "Get The Rooms",
+        "DescriptionText": "<Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "f4486a59277247468a061cf74eba0b7e",
+          "c9db86df911c4ec68b9a3d04f8022379"
+        ],
+        "HasNestedGroups": false,
+        "Left": 614.18483585132,
+        "Top": -1551.41345205778,
+        "Width": 495.34692544408722,
+        "Height": 395.13916934278586,
+        "FontSize": 36.0,
+        "InitialTop": -1477.41345205778,
+        "InitialHeight": 351.139169342789,
+        "TextblockHeight": 64.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "ef9bd811487a4fe7a71e93bc9d64acc6",
+        "Title": "Draw the outline of the rooms, then find the centroid",
+        "DescriptionText": "<Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "98ecec0fdde94f01a3618585ba0f082c",
+          "74a5a6f230ae4f8ca6f2f00092b37c17",
+          "d9184b226b444dd6be373a11248140bb",
+          "d1d74e00df064f2fa799104b79048f85"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1113.06673820923,
+        "Top": -1144.2546967164039,
+        "Width": 773.05865856398577,
+        "Height": 568.33087721651634,
+        "FontSize": 36.0,
+        "InitialTop": -1027.96898243069,
+        "InitialHeight": 482.045162930798,
+        "TextblockHeight": 106.285714285714,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "c2623707d9c24a78b482def7c8ac9f7a",
+        "Title": "Creating a vector between two sets of points",
+        "DescriptionText": "<Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "c547d0b50bc747ab8fc6e378856778e3"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2034.79047579347,
+        "Top": -1294.3847914342768,
+        "Width": 241.14285714285711,
+        "Height": 373.57142857142833,
+        "FontSize": 36.0,
+        "InitialTop": -1083.24193429142,
+        "InitialHeight": 192.428571428571,
+        "TextblockHeight": 201.142857142857,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "307cc4a73d354348b46d0d3cf1e45fc3",
+        "Title": "This is needed to modify position of elements inside Revit",
+        "DescriptionText": "<Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "011e44aab918478db05a8f9336875258"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2000.63263284316,
+        "Top": -1869.82394152866,
+        "Width": 221.71428571428578,
+        "Height": 430.71428571428578,
+        "FontSize": 36.0,
+        "InitialTop": -1571.82394152866,
+        "InitialHeight": 162.714285714286,
+        "TextblockHeight": 288.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "49cc79323cec45fd8cb81a0c0e750e17",
+        "Title": "Get The RoomTags",
+        "DescriptionText": "<Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "d9eb3aeb10014aecb56e6299ed4d917f",
+          "a6e8b99aeb3248999f2e4dd1115dc75a"
+        ],
+        "HasNestedGroups": false,
+        "Left": 843.12362006340663,
+        "Top": 491.35187571761423,
+        "Width": 544.5729212153401,
+        "Height": 229.66912012608668,
+        "FontSize": 36.0,
+        "InitialTop": 565.35187571761423,
+        "InitialHeight": 185.669120126087,
+        "TextblockHeight": 64.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "5f722d668f0a47dbb9c037217f103991",
+        "Title": "RUN THIS TOP BITS FIRST",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 337.64652399848512,
+        "Top": -1099.3185015144472,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "625ea0012a0a42f18ae1736f917d901f",
+        "Title": "UNFREEZE ME",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [],
+        "HasNestedGroups": false,
+        "Left": 2083.1194703578253,
+        "Top": 500.75211355632337,
+        "Width": 0.0,
+        "Height": 0.0,
+        "FontSize": 36.0,
+        "InitialTop": 0.0,
+        "InitialHeight": 0.0,
+        "TextblockHeight": 0.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 58.454730882548574,
+    "Y": 439.8664841385766,
+    "Zoom": 0.40193588989551665
+  }
+}
