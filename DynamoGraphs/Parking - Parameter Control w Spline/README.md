@@ -15,7 +15,7 @@
 - Run!
 
 
->img and video demo to come.
+>~~img~~ and video demo to come.
 
 <details open="open">
 <summary>Annotations</summary>
