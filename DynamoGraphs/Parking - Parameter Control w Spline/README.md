@@ -18,4 +18,5 @@
 >img and video demo to come.
 
 <details open="open">
-<summary>Video Tutorial</summary>
+<summary>Annotations</summary>
+    <img src="Annotation.png">
