@@ -2,7 +2,7 @@
   "Uuid": "f17ca9d4-904f-4d25-8f51-aedd60a7fd39",
   "IsCustomNode": false,
   "Description": null,
-  "Name": "Parking Script.V2FIN",
+  "Name": "Parking Script",
   "ElementResolver": {
     "ResolutionMap": {}
   },
@@ -268,7 +268,7 @@
       "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
       "NodeType": "ExtensionNode",
       "InstanceId": [
-        "e456c56d-3226-495b-b431-8210c4c973eb-0004ce37"
+        "8e053733-4881-4227-85db-18e1d56a0f63-0004e5dd"
       ],
       "Id": "bc64a0945f014541928481b8da6a02fe",
       "Inputs": [],
@@ -767,42 +767,12 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
       "NodeType": "CodeBlockNode",
-      "Code": "\"Motorcycle\";",
+      "Code": "\"4900 x 2600 (6.4M) no wheel stop\";",
       "Id": "faddf292f3a149b9816bbc1d70745a5d",
       "Inputs": [],
       "Outputs": [
         {
-          "Id": "7f1c8db8ff4042a89237735e94016a54",
-          "Name": "",
-          "Description": "Value of expression at line 1",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Allows for DesignScript code to be authored directly"
-    },
-    {
-      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
-      "NodeType": "CodeBlockNode",
-      "Code": "True;",
-      "Id": "bb1a1ac25a4842a8898f61b8c58566f9",
-      "Inputs": [
-        {
-          "Id": "54e750f3ac674eb19fb7cca1c6ba7bf5",
-          "Name": "True",
-          "Description": "True",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "4f54d321a6954a77bf9eaed26699363e",
+          "Id": "59e03911cc484088b36729495036ca32",
           "Name": "",
           "Description": "Value of expression at line 1",
           "UsingDefaultValue": false,
@@ -1201,15 +1171,9 @@
       "IsHidden": "False"
     },
     {
-      "Start": "7f1c8db8ff4042a89237735e94016a54",
+      "Start": "59e03911cc484088b36729495036ca32",
       "End": "41e6108c41904a3f97a1e069f4c32de7",
-      "Id": "ab8dee2ad495423e8a34ccc4ca74caef",
-      "IsHidden": "False"
-    },
-    {
-      "Start": "4f54d321a6954a77bf9eaed26699363e",
-      "End": "61c90413aae6441cb4cd865f51d31105",
-      "Id": "2f8f75b5ef314887a898e7849b7dc187",
+      "Id": "6d1869a59e674e95b6b085cb801aca38",
       "IsHidden": "False"
     },
     {
@@ -1225,15 +1189,15 @@
       "IsHidden": "False"
     },
     {
-      "Start": "d6b62947e9bc41a9afa7f61cc0e46246",
+      "Start": "41f52ffa844d408085f81e9dcbd9fca3",
       "End": "2a5aee7f44234314bd2452a1a117a76c",
-      "Id": "8a17614eb635497b975a4bd8f93fa8b3",
+      "Id": "d12b24fb0cd44e8984f2e4a0777b6522",
       "IsHidden": "False"
     },
     {
-      "Start": "d6b62947e9bc41a9afa7f61cc0e46246",
+      "Start": "41f52ffa844d408085f81e9dcbd9fca3",
       "End": "8cc1d6757f29411bba98a0a0d810bcb8",
-      "Id": "0bee11bd36d14458b660e587a0af98bb",
+      "Id": "e474f86367914060a7f841b7ace05500",
       "IsHidden": "False"
     },
     {
@@ -1541,7 +1505,7 @@
         "Y": -632.09492723780261
       },
       {
-        "Name": "Code Block",
+        "Name": "FAMILY NAME IN BETWEEN \" ___\" HERE",
         "ShowGeometry": true,
         "Id": "faddf292f3a149b9816bbc1d70745a5d",
         "IsSetAsInput": false,
@@ -1551,24 +1515,14 @@
         "Y": -557.70555048564654
       },
       {
-        "Name": "Code Block",
-        "ShowGeometry": true,
-        "Id": "bb1a1ac25a4842a8898f61b8c58566f9",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 805.20769242250844,
-        "Y": -372.69503555047675
-      },
-      {
         "Name": "String from Object",
         "ShowGeometry": true,
         "Id": "9c00599da92d4f9ca8851aa4838f1927",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1055.3537922785729,
-        "Y": -738.14428405791762
+        "X": 894.51744819498572,
+        "Y": -773.06874734463918
       },
       {
         "Name": "Not",
@@ -1577,8 +1531,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1839.0938462635295,
-        "Y": -616.3006247019681
+        "X": 1857.2467478276744,
+        "Y": -659.86758845591623
       },
       {
         "Name": "List.FilterByBoolMask",
@@ -1597,8 +1551,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -1257.2721955624284,
-        "Y": 230.73539050296108
+        "X": -1252.7639196972616,
+        "Y": 222.84590773891932
       },
       {
         "Name": "Categories",
@@ -1649,13 +1603,13 @@
         ],
         "HasNestedGroups": false,
         "Left": 1026.8862886901829,
-        "Top": 538.64136615498023,
-        "Width": 1294.6973703043645,
-        "Height": 435.90800477563994,
+        "Top": 537.15565186926585,
+        "Width": 1295.2687988757934,
+        "Height": 438.30800477564003,
         "FontSize": 48.0,
         "InitialTop": 625.44136615498019,
         "InitialHeight": 362.30800477564003,
-        "TextblockHeight": 76.8,
+        "TextblockHeight": 78.285714285714292,
         "Background": "#FFC1D676"
       },
       {
@@ -1668,20 +1622,19 @@
         "Nodes": [
           "dc7819c1624949ad8dcd33378ccd2c9a",
           "faddf292f3a149b9816bbc1d70745a5d",
-          "bb1a1ac25a4842a8898f61b8c58566f9",
           "9c00599da92d4f9ca8851aa4838f1927",
           "a56d60f1cad34b2894ecdb9682271276",
           "312a022350274e6093e1a50180e2485a"
         ],
         "HasNestedGroups": false,
-        "Left": 795.20769242250844,
-        "Top": -810.54428405791759,
-        "Width": 1542.9999174903573,
-        "Height": 569.64924850744092,
+        "Left": 839.36829643277247,
+        "Top": -847.06874734463918,
+        "Width": 1499.2964563372359,
+        "Height": 422.07748257327836,
         "FontSize": 36.0,
-        "InitialTop": -738.14428405791762,
-        "InitialHeight": 404.39989168732586,
-        "TextblockHeight": 62.4,
+        "InitialTop": -773.06874734463918,
+        "InitialHeight": 360.36319685899264,
+        "TextblockHeight": 64.0,
         "Background": "#FFC1D676"
       },
       {
@@ -1697,13 +1650,13 @@
         ],
         "HasNestedGroups": false,
         "Left": 3908.2900186948173,
-        "Top": 262.43113433525605,
-        "Width": 706.82150318018012,
-        "Height": 453.59488266448022,
+        "Top": 261.74542004954179,
+        "Width": 706.47864603732341,
+        "Height": 455.19488266448019,
         "FontSize": 36.0,
         "InitialTop": 378.03113433525607,
         "InitialHeight": 351.19488266448025,
-        "TextblockHeight": 105.6,
+        "TextblockHeight": 106.28571428571429,
         "Background": "#FFC1D676"
       },
       {
@@ -1719,13 +1672,13 @@
         ],
         "HasNestedGroups": false,
         "Left": 3351.9730399524542,
-        "Top": 469.61327825125375,
-        "Width": 478.60077625428221,
-        "Height": 247.9709331357908,
+        "Top": 468.92756396553949,
+        "Width": 478.48649053999634,
+        "Height": 249.57093313579077,
         "FontSize": 36.0,
         "InitialTop": 585.21327825125377,
         "InitialHeight": 145.57093313579082,
-        "TextblockHeight": 105.6,
+        "TextblockHeight": 106.28571428571429,
         "Background": "#FFC1D676"
       },
       {
@@ -1747,13 +1700,13 @@
         ],
         "HasNestedGroups": false,
         "Left": -1607.2269791892675,
-        "Top": -1112.2314357375603,
-        "Width": 2034.4322255272082,
-        "Height": 1100.7535903235141,
+        "Top": -1113.8314357375602,
+        "Width": 2035.6893683843509,
+        "Height": 1102.5821617520855,
         "FontSize": 36.0,
         "InitialTop": -1039.8314357375602,
-        "InitialHeight": 1058.353590323514,
-        "TextblockHeight": 62.4,
+        "InitialHeight": 1011.1535903235141,
+        "TextblockHeight": 64.0,
         "Background": "#FFC1D676"
       },
       {
@@ -1770,18 +1723,18 @@
         ],
         "HasNestedGroups": false,
         "Left": -1622.8886810841479,
-        "Top": 147.77252459637506,
-        "Width": 1068.8795292508912,
-        "Height": 587.81797956427158,
+        "Top": 146.17252459637507,
+        "Width": 1067.6223863937482,
+        "Height": 591.01797956427163,
         "FontSize": 36.0,
         "InitialTop": 220.17252459637507,
-        "InitialHeight": 545.4179795642716,
-        "TextblockHeight": 62.4,
+        "InitialHeight": 351.01797956427163,
+        "TextblockHeight": 64.0,
         "Background": "#FFC1D676"
       }
     ],
-    "X": -205.80111565441825,
-    "Y": 89.839359938833638,
-    "Zoom": 0.44425944907634696
+    "X": 391.15182281007861,
+    "Y": 441.17157802444194,
+    "Zoom": 0.22391614935714
   }
 }
