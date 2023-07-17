@@ -1,103 +1,686 @@
-<Workspace Version="1.3.3.4111" X="578.935702012816" Y="162.015083467578" zoom="0.775960161320019" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
-  <NamespaceResolutionMap />
-  <Elements>
-    <PythonNodeModels.PythonNode guid="537ffb55-95e5-4419-b249-79cfbd19daf0" type="PythonNodeModels.PythonNode" nickname="Python Script" x="-753.181475136321" y="159.223937361535" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="1">
-      <PortInfo index="0" default="False" />
-      <Script>#HAO THANH (GEOFFERY) PHUNG@K2LD
-
-import clr
-clr.AddReference('ProtoGeometry')
-from Autodesk.DesignScript.Geometry import *
-
-# Import DocumentManager and TransactionManager
-clr.AddReference("RevitServices")
-import RevitServices
-from RevitServices.Persistence import DocumentManager
-from RevitServices.Transactions import TransactionManager
-
-# Import RevitAPI
-clr.AddReference("RevitAPI")
-import Autodesk
-from Autodesk.Revit.DB import *
-
-doc = DocumentManager.Instance.CurrentDBDocument
-uiapp = DocumentManager.Instance.CurrentUIApplication
-app = uiapp.Application
-
-#The inputs to this node will be stored as a list in the IN variable.
-dataEnteringNode = IN
-
-groups = FilteredElementCollector(doc).OfClass(GroupType)
-unplacedGroups = []
-for i in groups:
-	gInstances = i.Groups
-	if gInstances.IsEmpty == 0:
-		unplacedGroups.append(i)
-OUT = unplacedGroups</Script>
-    </PythonNodeModels.PythonNode>
-    <CoreNodeModels.Watch guid="f84843cb-cb3e-4bcd-bb3d-349374a668ac" type="CoreNodeModels.Watch" nickname="Watch" x="-493.930934533306" y="121.203336769981" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-    </CoreNodeModels.Watch>
-    <PythonNodeModels.PythonNode guid="2f7082ca-7503-4f41-b65d-1851ae9cf4be" type="PythonNodeModels.PythonNode" nickname="Python Script" x="-749.810724234794" y="593.649791805875" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="1">
-      <PortInfo index="0" default="False" />
-      <Script>#HAO THANH (GEOFFERY) PHUNG@K2LD
-
-import clr
-clr.AddReference('ProtoGeometry')
-from Autodesk.DesignScript.Geometry import *
-
-# Import DocumentManager and TransactionManager
-clr.AddReference("RevitServices")
-import RevitServices
-from RevitServices.Persistence import DocumentManager
-from RevitServices.Transactions import TransactionManager
-
-# Import RevitAPI
-clr.AddReference("RevitAPI")
-import Autodesk
-from Autodesk.Revit.DB import *
-
-doc = DocumentManager.Instance.CurrentDBDocument
-uiapp = DocumentManager.Instance.CurrentUIApplication
-app = uiapp.Application
-
-#The inputs to this node will be stored as a list in the IN variable.
-dataEnteringNode = IN
-
-groups = FilteredElementCollector(doc).OfClass(GroupType)
-grouplist = []
-for i in groups:
-	grouplist.append(i)
-OUT = grouplist</Script>
-    </PythonNodeModels.PythonNode>
-    <CoreNodeModels.Watch guid="5ef716da-e35e-4e4a-86d6-d83811a75527" type="CoreNodeModels.Watch" nickname="Watch" x="-487.941007177544" y="623.702441326964" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
-      <PortInfo index="0" default="False" />
-    </CoreNodeModels.Watch>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="054316fd-3915-42a5-bc97-bfd08965f95e" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Elements.Delete" x="-62.9323061502897" y="141.035336408201" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="C:\Users\gphung\AppData\Roaming\Dynamo\Dynamo Revit\1.3\packages\archi-lab.net\bin\archilab.dll" function="archilab.Revit.Elements.Elements.Delete@Revit.Elements.Element">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-  </Elements>
-  <Connectors>
-    <Dynamo.Graph.Connectors.ConnectorModel start="537ffb55-95e5-4419-b249-79cfbd19daf0" start_index="0" end="f84843cb-cb3e-4bcd-bb3d-349374a668ac" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="f84843cb-cb3e-4bcd-bb3d-349374a668ac" start_index="0" end="054316fd-3915-42a5-bc97-bfd08965f95e" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="2f7082ca-7503-4f41-b65d-1851ae9cf4be" start_index="0" end="5ef716da-e35e-4e4a-86d6-d83811a75527" end_index="0" portType="0" />
-  </Connectors>
-  <Notes />
-  <Annotations>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="e8e111fb-14bf-4259-8e91-1932734d2c0c" annotationText="GROUPS IN THE REVIT FILE" left="-759.810724234794" top="547.649791805875" width="486.669717057251" height="271.852649521089" fontSize="30" InitialTop="593.649791805875" InitialHeight="339.052649521089" TextblockHeight="36" backgrouund="#FFC1D676">
-      <Models ModelGuid="2f7082ca-7503-4f41-b65d-1851ae9cf4be" />
-      <Models ModelGuid="5ef716da-e35e-4e4a-86d6-d83811a75527" />
-    </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="b47ece02-7309-48c4-9b13-d02a1231ca00" annotationText="UNUSED GROUPS IN REVIT FILE" left="-763.181475136321" top="75.2033367699813" width="484.050540603015" height="221" fontSize="30" InitialTop="121.203336769981" InitialHeight="246.6" TextblockHeight="36" backgrouund="#FFC1D676">
-      <Models ModelGuid="537ffb55-95e5-4419-b249-79cfbd19daf0" />
-      <Models ModelGuid="f84843cb-cb3e-4bcd-bb3d-349374a668ac" />
-    </Dynamo.Graph.Annotations.AnnotationModel>
-    <Dynamo.Graph.Annotations.AnnotationModel guid="728fdab0-0e22-44a0-ab57-5cbd9d12b4b6" annotationText="DELETE THESE GROUPS" left="-72.9323061502897" top="59.0353364082013" width="215.2" height="174.6" fontSize="30" InitialTop="141.035336408201" InitialHeight="122.6" TextblockHeight="72" backgrouund="#FFC1D676">
-      <Models ModelGuid="054316fd-3915-42a5-bc97-bfd08965f95e" />
-    </Dynamo.Graph.Annotations.AnnotationModel>
-  </Annotations>
-  <Presets />
-  <Cameras>
-    <Camera Name="Background Preview" eyeX="-18.9856401648089" eyeY="70.2990308235369" eyeZ="108.737334961945" lookX="25.160121328724" lookY="-27.2567981061177" lookZ="-121.607253088833" upX="0" upY="1" upZ="0" />
-  </Cameras>
-</Workspace>
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "GROUPS REVIEW",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "#HAO THANH (GEOFFERY) PHUNG@K2LD\n\nimport clr\nclr.AddReference('ProtoGeometry')\nfrom Autodesk.DesignScript.Geometry import *\n\n# Import DocumentManager and TransactionManager\nclr.AddReference(\"RevitServices\")\nimport RevitServices\nfrom RevitServices.Persistence import DocumentManager\nfrom RevitServices.Transactions import TransactionManager\n\n# Import RevitAPI\nclr.AddReference(\"RevitAPI\")\nimport Autodesk\nfrom Autodesk.Revit.DB import *\n\ndoc = DocumentManager.Instance.CurrentDBDocument\nuiapp = DocumentManager.Instance.CurrentUIApplication\napp = uiapp.Application\n\n#The inputs to this node will be stored as a list in the IN variable.\ndataEnteringNode = IN\n\ngroups = FilteredElementCollector(doc).OfClass(GroupType)\nunplacedGroups = []\nfor i in groups:\n        gInstances = i.Groups\n        if gInstances.IsEmpty == 0:\n                unplacedGroups.append(i)\nOUT = unplacedGroups",
+      "Engine": "CPython3",
+      "EngineName": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "537ffb5595e54419b24979cfbd19daf0",
+      "Inputs": [
+        {
+          "Id": "f1bad7251435456dbcb55a68ef9a3441",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "56efcb2c56544d44959bfc1f414cbce0",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "f84843cbcb3e4bcdbb3d349374a668ac",
+      "Inputs": [
+        {
+          "Id": "79a738c279344381a98b04b9af822574",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ce5d61ecb94847519487b533b54d853f",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "#HAO THANH (GEOFFERY) PHUNG@K2LD\n\nimport clr\nclr.AddReference('ProtoGeometry')\nfrom Autodesk.DesignScript.Geometry import *\n\n# Import DocumentManager and TransactionManager\nclr.AddReference(\"RevitServices\")\nimport RevitServices\nfrom RevitServices.Persistence import DocumentManager\nfrom RevitServices.Transactions import TransactionManager\n\n# Import RevitAPI\nclr.AddReference(\"RevitAPI\")\nimport Autodesk\nfrom Autodesk.Revit.DB import *\n\ndoc = DocumentManager.Instance.CurrentDBDocument\nuiapp = DocumentManager.Instance.CurrentUIApplication\napp = uiapp.Application\n\n#The inputs to this node will be stored as a list in the IN variable.\ndataEnteringNode = IN\n\ngroups = FilteredElementCollector(doc).OfClass(GroupType)\ngrouplist = []\nfor i in groups:\n        grouplist.append(i)\nOUT = grouplist",
+      "Engine": "CPython3",
+      "EngineName": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "2f7082ca75034f41b65d1851ae9cf4be",
+      "Inputs": [
+        {
+          "Id": "6796f402f39f4546a640b640fedafb37",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4d77c1f6c74041e39defe70bad62817f",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "5ef716dae35e4e4a86d6d83811a75527",
+      "Inputs": [
+        {
+          "Id": "5f42129aed8c4f2d88db528fa99fa0a5",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "53221a2a5aa146709bd38de40780e4c1",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Delete@Revit.Elements.Element",
+      "Id": "b7d728655bd345b0a75e99c59ac457e2",
+      "Inputs": [
+        {
+          "Id": "ac04a1057bee451c80da0d255f9576e8",
+          "Name": "element",
+          "Description": "The element to delete.\n\nElement",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0e8f06396999482bb5a824d9be77b3a8",
+          "Name": "int[]",
+          "Description": "The list of element id's deleted, including any dependent elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Delete the element and any elements that are totally dependent upon the element.\n\nElement.Delete (element: Element): int[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Name",
+      "Id": "4d678f5331334e09aeebfc03eff33c25",
+      "Inputs": [
+        {
+          "Id": "f111017387af4b8c85ffd5c874eb084c",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c36bd76b5aab432eaf4ecb0db9366a23",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Name of the Element\n\nElement.Name: string"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "c1eb75470eea4119a79617cff2868a05",
+      "Inputs": [
+        {
+          "Id": "94a77b23429c41128e6a9f1653bfacc5",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "056597601ed1401992f4e6e746d75e25",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "0300356a2d8149dbb5186339038fc554",
+      "Inputs": [
+        {
+          "Id": "e9d6f8fe4a224c4aa62ef5de5e5d0618",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8d4d6080035d4305a83d863f9894784e",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Name",
+      "Id": "a0c58b70e0204049952b4096402752c4",
+      "Inputs": [
+        {
+          "Id": "3489fcae1f554ebd99bc8f328133f6e8",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9130fdae50294a53b38bfc4e10a6a357",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Name of the Element\n\nElement.Name: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.SetDifference@var[],var[]",
+      "Id": "3bc53dcc3b3146e2b3a90a71d4671053",
+      "Inputs": [
+        {
+          "Id": "dca08452fd7143ccbf7cc97e67f60665",
+          "Name": "list1",
+          "Description": "List of objects to be included in the new list\n\nvar[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d92c7c4e56ab45afa3e92f48e0fb3ad1",
+          "Name": "list2",
+          "Description": "List of objects to be excluded in the new list\n\nvar[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cce22fd651344b4197648c07f271d5e0",
+          "Name": "list",
+          "Description": "The new list that contains objects in List1 but not in List2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns a new list that includes objects in List1 but excludes objects in List2.\n\nList.SetDifference (list1: var[], list2: var[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "074c5a1d20ee415b90fe1ddcb75d0871",
+      "Inputs": [
+        {
+          "Id": "51353b65fd8045a98091921f4478c1ce",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e86bce92be5b44039d1415396dcae336",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Name",
+      "Id": "4b9c58cbf89441f7b4f2392817f8e6e0",
+      "Inputs": [
+        {
+          "Id": "f4e2756a62d8421e93b8435bbb1168e8",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8c130bf4e46f47728fd64c364b36c088",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Name of the Element\n\nElement.Name: string"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "56efcb2c56544d44959bfc1f414cbce0",
+      "End": "79a738c279344381a98b04b9af822574",
+      "Id": "f78791737020485499d2c8d7c8dd8750",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "56efcb2c56544d44959bfc1f414cbce0",
+      "End": "f111017387af4b8c85ffd5c874eb084c",
+      "Id": "478776c630b340cfb222469fcf9d5b2b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ce5d61ecb94847519487b533b54d853f",
+      "End": "d92c7c4e56ab45afa3e92f48e0fb3ad1",
+      "Id": "fcadfdb71eb447639470d112e91d9db6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d77c1f6c74041e39defe70bad62817f",
+      "End": "5f42129aed8c4f2d88db528fa99fa0a5",
+      "Id": "d3397e847e544ce997109917d2e37872",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4d77c1f6c74041e39defe70bad62817f",
+      "End": "3489fcae1f554ebd99bc8f328133f6e8",
+      "Id": "7dd2be4cccbf4d3393bb9049b9dee60f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "53221a2a5aa146709bd38de40780e4c1",
+      "End": "dca08452fd7143ccbf7cc97e67f60665",
+      "Id": "bf63e49a75054e8295ee1a8edad8f105",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c36bd76b5aab432eaf4ecb0db9366a23",
+      "End": "94a77b23429c41128e6a9f1653bfacc5",
+      "Id": "e61b10699dbc4f539af3a09ee2d7b08b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "9130fdae50294a53b38bfc4e10a6a357",
+      "End": "e9d6f8fe4a224c4aa62ef5de5e5d0618",
+      "Id": "90a460472ef54f3389ac626510e4a0c6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cce22fd651344b4197648c07f271d5e0",
+      "End": "f4e2756a62d8421e93b8435bbb1168e8",
+      "Id": "b95bea6d686c46f69e6cf74377fa51f2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8c130bf4e46f47728fd64c364b36c088",
+      "End": "51353b65fd8045a98091921f4478c1ce",
+      "Id": "4a9aa1a5a6874903bf666aca52f75794",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "None provided",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.1.2727",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -18.985639572143555,
+      "EyeY": 70.299034118652344,
+      "EyeZ": 108.73733520507813,
+      "LookX": 25.160121917724609,
+      "LookY": -27.256797790527344,
+      "LookZ": -121.60725402832031,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Python Script",
+        "ShowGeometry": true,
+        "Id": "537ffb5595e54419b24979cfbd19daf0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -789.26580187851857,
+        "Y": 148.91412972090708
+      },
+      {
+        "Name": "Watch",
+        "ShowGeometry": true,
+        "Id": "f84843cbcb3e4bcdbb3d349374a668ac",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -478.46622307236424,
+        "Y": 110.89352912935306
+      },
+      {
+        "Name": "Python Script",
+        "ShowGeometry": true,
+        "Id": "2f7082ca75034f41b65d1851ae9cf4be",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -740.65675965083733,
+        "Y": -504.8259582689692
+      },
+      {
+        "Name": "Watch",
+        "ShowGeometry": true,
+        "Id": "5ef716dae35e4e4a86d6d83811a75527",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -478.78704259358739,
+        "Y": -474.77330874788015
+      },
+      {
+        "Name": "Element.Delete",
+        "ShowGeometry": true,
+        "Id": "b7d728655bd345b0a75e99c59ac457e2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 924.61390164225713,
+        "Y": -98.592072803316057
+      },
+      {
+        "Name": "Element.Name",
+        "ShowGeometry": true,
+        "Id": "4d678f5331334e09aeebfc03eff33c25",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -150.3298668435034,
+        "Y": 329.52619862819608
+      },
+      {
+        "Name": "Watch",
+        "ShowGeometry": true,
+        "Id": "c1eb75470eea4119a79617cff2868a05",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 113.24256665986184,
+        "Y": 249.45631699657406
+      },
+      {
+        "Name": "Watch",
+        "ShowGeometry": true,
+        "Id": "0300356a2d8149dbb5186339038fc554",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 216.09641416626869,
+        "Y": -477.69115869033908
+      },
+      {
+        "Name": "Element.Name",
+        "ShowGeometry": true,
+        "Id": "a0c58b70e0204049952b4096402752c4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -73.25053843866533,
+        "Y": -478.62690852079322
+      },
+      {
+        "Name": "List.SetDifference",
+        "ShowGeometry": true,
+        "Id": "3bc53dcc3b3146e2b3a90a71d4671053",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 620.75110169069751,
+        "Y": -101.55859251302252
+      },
+      {
+        "Name": "Watch",
+        "ShowGeometry": true,
+        "Id": "074c5a1d20ee415b90fe1ddcb75d0871",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1182.3054045565482,
+        "Y": 212.74271943091753
+      },
+      {
+        "Name": "Element.Name",
+        "ShowGeometry": true,
+        "Id": "4b9c58cbf89441f7b4f2392817f8e6e0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 927.03761597072616,
+        "Y": 198.139649002552
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "e8e111fb14bf42598e911932734d2c0c",
+        "Title": "GROUPS IN THE REVIT FILE",
+        "DescriptionText": "<Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "2f7082ca75034f41b65d1851ae9cf4be",
+          "5ef716dae35e4e4a86d6d83811a75527"
+        ],
+        "HasNestedGroups": false,
+        "Left": -750.65675965083733,
+        "Top": -570.8259582689692,
+        "Width": 559.01257420010711,
+        "Height": 394.4812209496605,
+        "FontSize": 30.0,
+        "InitialTop": -504.8259582689692,
+        "InitialHeight": 175.05264952108905,
+        "TextblockHeight": 56.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "b47ece02730948c49b13d02a1231ca00",
+        "Title": "GROUPS THAT ARE PLACED IN THE DOCUMENT",
+        "DescriptionText": "<Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "537ffb5595e54419b24979cfbd19daf0",
+          "f84843cbcb3e4bcdbb3d349374a668ac"
+        ],
+        "HasNestedGroups": false,
+        "Left": -799.26580187851857,
+        "Top": 8.3221005579244718,
+        "Width": 607.9424359490115,
+        "Height": 401.0,
+        "FontSize": 30.0,
+        "InitialTop": 110.89352912935306,
+        "InitialHeight": 183.02060059155403,
+        "TextblockHeight": 92.571428571428584,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3b581edc88654fac86b861f1c3d1c467",
+        "Title": "Do a last eye check before connecting this node in",
+        "DescriptionText": "<Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "b7d728655bd345b0a75e99c59ac457e2"
+        ],
+        "HasNestedGroups": false,
+        "Left": 914.61390164225713,
+        "Top": -309.73492994617322,
+        "Width": 224.0,
+        "Height": 343.85714285714289,
+        "FontSize": 36.0,
+        "InitialTop": -98.592072803316057,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 201.14285714285714,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 547.324653956143,
+    "Y": 447.19088123054712,
+    "Zoom": 0.68808308735931911
+  }
+}

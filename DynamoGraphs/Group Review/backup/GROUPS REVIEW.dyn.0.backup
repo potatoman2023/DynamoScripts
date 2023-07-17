@@ -1,0 +1,103 @@
+<Workspace Version="1.3.3.4111" X="578.935702012816" Y="162.015083467578" zoom="0.775960161320019" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <PythonNodeModels.PythonNode guid="537ffb55-95e5-4419-b249-79cfbd19daf0" type="PythonNodeModels.PythonNode" nickname="Python Script" x="-753.181475136321" y="159.223937361535" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="1">
+      <PortInfo index="0" default="False" />
+      <Script>#HAO THANH (GEOFFERY) PHUNG@K2LD
+
+import clr
+clr.AddReference('ProtoGeometry')
+from Autodesk.DesignScript.Geometry import *
+
+# Import DocumentManager and TransactionManager
+clr.AddReference("RevitServices")
+import RevitServices
+from RevitServices.Persistence import DocumentManager
+from RevitServices.Transactions import TransactionManager
+
+# Import RevitAPI
+clr.AddReference("RevitAPI")
+import Autodesk
+from Autodesk.Revit.DB import *
+
+doc = DocumentManager.Instance.CurrentDBDocument
+uiapp = DocumentManager.Instance.CurrentUIApplication
+app = uiapp.Application
+
+#The inputs to this node will be stored as a list in the IN variable.
+dataEnteringNode = IN
+
+groups = FilteredElementCollector(doc).OfClass(GroupType)
+unplacedGroups = []
+for i in groups:
+	gInstances = i.Groups
+	if gInstances.IsEmpty == 0:
+		unplacedGroups.append(i)
+OUT = unplacedGroups</Script>
+    </PythonNodeModels.PythonNode>
+    <CoreNodeModels.Watch guid="f84843cb-cb3e-4bcd-bb3d-349374a668ac" type="CoreNodeModels.Watch" nickname="Watch" x="-493.930934533306" y="121.203336769981" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+    <PythonNodeModels.PythonNode guid="2f7082ca-7503-4f41-b65d-1851ae9cf4be" type="PythonNodeModels.PythonNode" nickname="Python Script" x="-749.810724234794" y="593.649791805875" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" inputcount="1">
+      <PortInfo index="0" default="False" />
+      <Script>#HAO THANH (GEOFFERY) PHUNG@K2LD
+
+import clr
+clr.AddReference('ProtoGeometry')
+from Autodesk.DesignScript.Geometry import *
+
+# Import DocumentManager and TransactionManager
+clr.AddReference("RevitServices")
+import RevitServices
+from RevitServices.Persistence import DocumentManager
+from RevitServices.Transactions import TransactionManager
+
+# Import RevitAPI
+clr.AddReference("RevitAPI")
+import Autodesk
+from Autodesk.Revit.DB import *
+
+doc = DocumentManager.Instance.CurrentDBDocument
+uiapp = DocumentManager.Instance.CurrentUIApplication
+app = uiapp.Application
+
+#The inputs to this node will be stored as a list in the IN variable.
+dataEnteringNode = IN
+
+groups = FilteredElementCollector(doc).OfClass(GroupType)
+grouplist = []
+for i in groups:
+	grouplist.append(i)
+OUT = grouplist</Script>
+    </PythonNodeModels.PythonNode>
+    <CoreNodeModels.Watch guid="5ef716da-e35e-4e4a-86d6-d83811a75527" type="CoreNodeModels.Watch" nickname="Watch" x="-487.941007177544" y="623.702441326964" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="054316fd-3915-42a5-bc97-bfd08965f95e" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Elements.Delete" x="-62.9323061502897" y="141.035336408201" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="C:\Users\gphung\AppData\Roaming\Dynamo\Dynamo Revit\1.3\packages\archi-lab.net\bin\archilab.dll" function="archilab.Revit.Elements.Elements.Delete@Revit.Elements.Element">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="537ffb55-95e5-4419-b249-79cfbd19daf0" start_index="0" end="f84843cb-cb3e-4bcd-bb3d-349374a668ac" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="f84843cb-cb3e-4bcd-bb3d-349374a668ac" start_index="0" end="054316fd-3915-42a5-bc97-bfd08965f95e" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2f7082ca-7503-4f41-b65d-1851ae9cf4be" start_index="0" end="5ef716da-e35e-4e4a-86d6-d83811a75527" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="e8e111fb-14bf-4259-8e91-1932734d2c0c" annotationText="GROUPS IN THE REVIT FILE" left="-759.810724234794" top="547.649791805875" width="486.669717057251" height="271.852649521089" fontSize="30" InitialTop="593.649791805875" InitialHeight="339.052649521089" TextblockHeight="36" backgrouund="#FFC1D676">
+      <Models ModelGuid="2f7082ca-7503-4f41-b65d-1851ae9cf4be" />
+      <Models ModelGuid="5ef716da-e35e-4e4a-86d6-d83811a75527" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="b47ece02-7309-48c4-9b13-d02a1231ca00" annotationText="UNUSED GROUPS IN REVIT FILE" left="-763.181475136321" top="75.2033367699813" width="484.050540603015" height="221" fontSize="30" InitialTop="121.203336769981" InitialHeight="246.6" TextblockHeight="36" backgrouund="#FFC1D676">
+      <Models ModelGuid="537ffb55-95e5-4419-b249-79cfbd19daf0" />
+      <Models ModelGuid="f84843cb-cb3e-4bcd-bb3d-349374a668ac" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="728fdab0-0e22-44a0-ab57-5cbd9d12b4b6" annotationText="DELETE THESE GROUPS" left="-72.9323061502897" top="59.0353364082013" width="215.2" height="174.6" fontSize="30" InitialTop="141.035336408201" InitialHeight="122.6" TextblockHeight="72" backgrouund="#FFC1D676">
+      <Models ModelGuid="054316fd-3915-42a5-bc97-bfd08965f95e" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-18.9856401648089" eyeY="70.2990308235369" eyeZ="108.737334961945" lookX="25.160121328724" lookY="-27.2567981061177" lookZ="-121.607253088833" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>
