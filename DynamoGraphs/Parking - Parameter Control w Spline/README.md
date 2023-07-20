@@ -18,6 +18,11 @@
 
 >~~img~~ and video demo to come.
 
+
 <details open="open">
 <summary>Annotations</summary>
     <img src="Annotation.png">
+
+
+
+> ### This graph is made with flexibility in mind, which is why there are so many parameters input - In fact, you can adjust them to be renumber pretty much any other elements (ie rooms, joinery, groups, grids, doors etc.) ###
