@@ -1,1 +1,1 @@
-🦖 Isolation zone - Revit file(s) WIP to test the graphs. :t-rex: 🦖
+🦖 Isolation zone - Revit file(s) WIP to test the graphs. 🦖
