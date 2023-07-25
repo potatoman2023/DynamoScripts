@@ -2,7 +2,7 @@
   "Uuid": "13d8bf0f-3bcf-418a-8648-ddf251702cd6",
   "IsCustomNode": false,
   "Description": null,
-  "Name": "01 - Purging Line Patterns",
+  "Name": "Purging Line Patterns",
   "ElementResolver": {
     "ResolutionMap": {}
   },
@@ -11,7 +11,8 @@
   "Nodes": [
     {
       "ConcreteType": "DSRevitNodesUI.ElementTypes, DSRevitNodesUI",
-      "SelectedIndex": 174,
+      "SelectedIndex": 78,
+      "SelectedString": "DetailLine",
       "NodeType": "ExtensionNode",
       "Id": "97b26858a7d9482ba4a4b84a1186aace",
       "Inputs": [],
@@ -506,38 +507,9 @@
       "Description": "Visualize the output of node."
     },
     {
-      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
-      "NodeType": "FunctionNode",
-      "FunctionSignature": "archilab.Revit.Elements.Elements.Delete@Revit.Elements.Element",
-      "Id": "c36db149b989471d898e4d00ba798111",
-      "Inputs": [
-        {
-          "Id": "604e01429fc04e23b448ce230860655d",
-          "Name": "element",
-          "Description": "Element to delete.\n\nElement",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Outputs": [
-        {
-          "Id": "4041ca61c9e7480c9b95b500a07311ff",
-          "Name": "bool",
-          "Description": "bool",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Auto",
-      "Description": "Delete element from Revit DB.\n\nElements.Delete (element: Element): bool"
-    },
-    {
       "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
-      "SelectedIndex": 256,
+      "SelectedIndex": 282,
+      "SelectedString": "OST_Lines",
       "NodeType": "ExtensionNode",
       "Id": "e91e02203dab4c8d8e22963bd56bfa07",
       "Inputs": [],
@@ -673,13 +645,14 @@
     }
   ],
   "Dependencies": [],
+  "NodeLibraryDependencies": [],
   "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
-      "HasRunWithoutCrash": false,
+      "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.0.4.12684",
+      "Version": "2.6.1.8786",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -733,8 +706,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 835.03699560871564,
-        "Y": -377.74643623248573
+        "X": 919.468186610031,
+        "Y": -391.81830139937165
       },
       {
         "ShowGeometry": true,
@@ -858,16 +831,6 @@
       },
       {
         "ShowGeometry": true,
-        "Name": "Elements.Delete",
-        "Id": "c36db149b989471d898e4d00ba798111",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 1929.5541999855072,
-        "Y": -154.06273430348
-      },
-      {
-        "ShowGeometry": true,
         "Name": "Categories",
         "Id": "e91e02203dab4c8d8e22963bd56bfa07",
         "IsSetAsInput": false,
@@ -899,7 +862,7 @@
         ],
         "Left": 568.83756128323944,
         "Top": 613.036556339875,
-        "Width": 720.992402034245,
+        "Width": 748.192402034245,
         "Height": 361.3187806416197,
         "FontSize": 36.0,
         "InitialTop": 795.836556339875,
@@ -916,7 +879,7 @@
         "Left": 2275.1205772776216,
         "Top": -143.69528093613081,
         "Width": 193.37666666666667,
-        "Height": 361.0,
+        "Height": 380.2,
         "FontSize": 36.0,
         "InitialTop": 125.50471906386917,
         "InitialHeight": 145.0,
@@ -938,26 +901,10 @@
         "InitialHeight": 145.0,
         "TextblockHeight": 345.6,
         "Background": "#FFC1D676"
-      },
-      {
-        "Id": "4d87339aff3f4ffda1d103bdad1198b3",
-        "Title": "Package from Archi-lab",
-        "Nodes": [
-          "c36db149b989471d898e4d00ba798111"
-        ],
-        "Left": 1919.5541999855072,
-        "Top": -293.66273430347997,
-        "Width": 215.2,
-        "Height": 232.19999999999996,
-        "FontSize": 36.0,
-        "InitialTop": -154.06273430348,
-        "InitialHeight": 145.0,
-        "TextblockHeight": 129.6,
-        "Background": "#FFC1D676"
       }
     ],
-    "X": -138.5936757539576,
-    "Y": 256.20115287298131,
-    "Zoom": 0.57326490622568926
+    "X": 175.26367345314696,
+    "Y": 227.62662201233798,
+    "Zoom": 0.744888434554767
   }
 }

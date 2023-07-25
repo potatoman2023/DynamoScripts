@@ -2,7 +2,7 @@
   "Uuid": "13d8bf0f-3bcf-418a-8648-ddf251702cd6",
   "IsCustomNode": false,
   "Description": null,
-  "Name": "01 - Purging Material like wth...",
+  "Name": "Purging Material like wth...",
   "ElementResolver": {
     "ResolutionMap": {}
   },
@@ -399,7 +399,8 @@
     },
     {
       "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
-      "SelectedIndex": 296,
+      "SelectedIndex": 323,
+      "SelectedString": "OST_Materials",
       "NodeType": "ExtensionNode",
       "Id": "99ab1cf5989540079b4ba84018f3f7cb",
       "Inputs": [],
@@ -537,13 +538,13 @@
     {
       "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
       "NodeType": "FunctionNode",
-      "FunctionSignature": "archilab.Revit.Elements.Elements.Delete@Revit.Elements.Element",
-      "Id": "2f02a049f533422c9f720aa95fd73c03",
+      "FunctionSignature": "Revit.Elements.Element.Delete@Revit.Elements.Element",
+      "Id": "bf2664704429402c9daf2de9d5ffc231",
       "Inputs": [
         {
-          "Id": "68efd1b6fa07480f95bad5447e92503b",
+          "Id": "8630f5663ce04713926326663c8c3e98",
           "Name": "element",
-          "Description": "Element to delete.\n\nElement",
+          "Description": "The element to delete.\n\nElement",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -552,9 +553,9 @@
       ],
       "Outputs": [
         {
-          "Id": "4f0d171dd3ad4bce86f7c872698fa3e2",
-          "Name": "bool",
-          "Description": "bool",
+          "Id": "945526bcf180435dbd80f4f798f26be5",
+          "Name": "int[]",
+          "Description": "The list of element id's deleted, including any dependent elements.",
           "UsingDefaultValue": false,
           "Level": 2,
           "UseLevels": false,
@@ -562,7 +563,7 @@
         }
       ],
       "Replication": "Auto",
-      "Description": "Delete element from Revit DB.\n\nElements.Delete (element: Element): bool"
+      "Description": "Delete the element and any elements that are totally dependent upon the element.\n\nElement.Delete (element: Element): int[]"
     }
   ],
   "Connectors": [
@@ -612,11 +613,6 @@
       "Id": "ea44ae9157804e06b88ffdbf2ffc56da"
     },
     {
-      "Start": "2527b36a32d5491f83227808462d706c",
-      "End": "68efd1b6fa07480f95bad5447e92503b",
-      "Id": "60e88a6c7a0847dc91b06bac195a4335"
-    },
-    {
       "Start": "4c9165dd10074fb6a11b6c1bc6e99a08",
       "End": "b032057cf65545758859a1e31f6efcac",
       "Id": "01c0c4e9b26f41638313a1c6441583b6"
@@ -658,13 +654,14 @@
     }
   ],
   "Dependencies": [],
+  "NodeLibraryDependencies": [],
   "Bindings": [],
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
       "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
-      "Version": "2.0.4.12684",
+      "Version": "2.6.1.8786",
       "RunType": "Manual",
       "RunPeriod": "1000"
     },
@@ -748,8 +745,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1710.2117541427485,
-        "Y": 545.81984652817619
+        "X": 1523.2520048737551,
+        "Y": 595.25631869065046
       },
       {
         "ShowGeometry": true,
@@ -768,8 +765,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2049.1981505679123,
-        "Y": 651.16582949252347
+        "X": 2190.3168074680666,
+        "Y": 589.14552805232847
       },
       {
         "ShowGeometry": true,
@@ -808,8 +805,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -290.04560106267809,
-        "Y": 353.31191602707463
+        "X": -293.64098085631258,
+        "Y": 344.3234665429884
       },
       {
         "ShowGeometry": true,
@@ -853,13 +850,13 @@
       },
       {
         "ShowGeometry": true,
-        "Name": "Elements.Delete",
-        "Id": "2f02a049f533422c9f720aa95fd73c03",
+        "Name": "Element.Delete",
+        "Id": "bf2664704429402c9daf2de9d5ffc231",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1821.5355925417157,
-        "Y": -20.613120178615191
+        "X": 1682.4430040187676,
+        "Y": 1.574370953628744
       }
     ],
     "Annotations": [
@@ -889,13 +886,13 @@
           "d483e745a9cc4e7bab4e6a244e55ab65"
         ],
         "Left": 2275.1205772776216,
-        "Top": -57.295280936130837,
-        "Width": 300.0,
-        "Height": 559.40000000000009,
+        "Top": -143.69528093613081,
+        "Width": 193.37666666666667,
+        "Height": 380.2,
         "FontSize": 36.0,
         "InitialTop": 125.50471906386917,
         "InitialHeight": 145.0,
-        "TextblockHeight": 172.8,
+        "TextblockHeight": 259.2,
         "Background": "#FFC1D676"
       },
       {
@@ -915,8 +912,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -960.81122876685,
-    "Y": 66.410107740822951,
-    "Zoom": 0.84368182177424489
+    "X": -907.02667586660527,
+    "Y": 604.19876081505186,
+    "Zoom": 0.89003114654688276
   }
 }
