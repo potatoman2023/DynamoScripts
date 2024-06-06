@@ -1,3 +1,6 @@
 #  Rename Views
 
-- Collected Graph I believe - Need to check
+- Collected Graph
+- Rename the selected views by adding prefix/suffix or replace texts
+- Recommend to run this in Dynamo Player mode
+- Require Springs and Clockwork package
